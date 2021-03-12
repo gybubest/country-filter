@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function Search() {
-    return (
-      <input data-testid="filterInput" className="large" placeholder="Enter Country Name"/>
-  	);
+function Search({handleSearch}) {
+  const [input, setInput] = useState('');
+
+  return (
+    <input data-testid="filterInput" className="large" placeholder="Enter Country Name" onChange={e => handleSearch(e.target.value)}/>
+  );
 }
 
 export default Search;
