@@ -1,10 +1,11 @@
 import React from 'react';
 
-function CountryList() {
+function CountryList({countries}) {
+  const countryList = countries.map(country => <li key={country.toLowerCase} className="pa-10 pl-20">{country}</li>)
   return (
     <section>
       <ul className="card country-list" data-testid="countryList">
-        <li key="india" className="pa-10 pl-20">India</li>
+        {countryList}
       </ul>
     </section>
   );
