@@ -7,11 +7,10 @@ import 'h8k-components';
 
 const title = "Country Filter";
 function App() {
-    const [countries, setCountries] = useState(response);
     const [filteredCountries, setfilteredCountries] = useState([]);
 
     const handleSearch = value => {
-        const list = countries.filter(country => country.toLowerCase().includes(value.trim().toLowerCase()));
+        const list = response.filter(country => country.toLowerCase().includes(value.trim().toLowerCase()));
         setfilteredCountries(list);
     };
 
