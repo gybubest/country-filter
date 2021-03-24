@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import CountriesContext from '../countriesContext';
 
-function CountryList({countries}) {
+function CountryList() {
+  const countries = useContext(CountriesContext);
   const countryList = countries.map(country => <li key={country.toLowerCase()} className="pa-10 pl-20">{country}</li>);
 
   return (
