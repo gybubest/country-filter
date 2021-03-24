@@ -11,11 +11,7 @@ function App() {
     const [filteredCountries, setfilteredCountries] = useState([]);
 
     const handleSearch = value => {
-        const list = countries.filter(country => {
-            if (country.toLowerCase().includes(value.trim().toLowerCase())) {
-                return country;
-            };
-        });
+        const list = countries.filter(country => country.toLowerCase().includes(value.trim().toLowerCase()));
         setfilteredCountries(list);
     };
 
