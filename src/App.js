@@ -7,11 +7,11 @@ import 'h8k-components';
 
 const title = "Country Filter";
 function App() {
-    const [filteredCountries, setfilteredCountries] = useState([]);
+    const [countries, setCountries] = useState(response);
 
     const handleSearch = value => {
         const list = response.filter(country => country.toLowerCase().includes(value.trim().toLowerCase()));
-        setfilteredCountries(list);
+        setCountries(list);
     };
 
     return (
@@ -22,7 +22,7 @@ function App() {
                     handleSearch={handleSearch}
                 />
                 <CountryList 
-                    countries={filteredCountries}
+                    countries={countries}
                 />
             </section>
         </div>
